@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+
+  <!--black o dark?-->
+  <body class="bg-black">
+    <!--no sticky?-->
+    <nav data-bs-theme="dark" class="navbar sticky-top navbar-expand-lg bg-black">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="assets/img/netflix_logo.png" alt="Netflix" width="115" height="45" class="img-fluid" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold active" aria-current="page">TV Shows</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="#">Movies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="#">Recently Added</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold" href="#">My list</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center">
+            <i class="fas fa-search text-light"></i>
+            <button class="btn btn-sm btn-outline-danger text-white text-uppercase mx-2 border border-0">Kids</button>
+            <i class="fas fa-bell text-light"></i>
+            <div class="btn-group">
+              <button type="button" class="btn btn-smbtn-secondary">
+                <img src="assets/img/avatar.png" alt="profile pic" class="img-fluid" width="45px" height="45px" />
+              </button>
+              <button
+                type="button"
+                class="btn btn-sm btn-outline-secondary dropdown-toggle dropdown-toggle-split border border-0"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <span class="visually-hidden">Toggle Dropdown</span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Profile Settings</a></li>
+                <li><a class="dropdown-item" href="#">Preferences</a></li>
+                <li><a class="dropdown-item" href="#">Switch Profile</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Log-Out</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <main>
+        <div class="container d-flex justify-content-between align-items-center pb-2">
+          <div class="d-flex align-items-center gap-3 flex-column flex-md-row">
+            <h1 class="text-white display-1 fs-1 fw-semibold">TV Shows</h1>
+            <div class="dropdown-center" data-bs-theme="dark">
+              <button
+                class="btn btn-sm fw-semibold btn-outline-light dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Genres
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Comedy</a></li>
+                <li><a class="dropdown-item" href="#">Horror</a></li>
+                <li><a class="dropdown-item" href="#">Romance</a></li>
+                <li><a class="dropdown-item" href="#">Thriller</a></li>
+                <li><a class="dropdown-item" href="#">Documentary</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="btn-group d-none d-md-block" role="group" aria-label="Vertical radio toggle button group">
+            <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked />
+            <label class="btn btn-sm btn-outline-light px-3" for="vbtn-radio1"
+              ><i class="fas fa-stream text-secondary"></i
+            ></label>
+            <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off" />
+            <label class="btn btn-sm btn-outline-light px-3" for="vbtn-radio2"
+              ><i class="fas fa-th-large text-secondary"></i
+            ></label>
+          </div>
+        </div>
+
+        <!--Manca responsive xs/xl-->
+        <div class="container pb-3">
+          <h2 class="text-light fs-4 py-2">Trending Now</h2>
+          <div class="row g-1">
+            <div class="col-6 col-md-3 col-lg-2">
+              <div>
+                <img src="assets/img/media/media0.webp" alt="" class="img-fluid" />
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div>
+                <img src="assets/img/media/media0.webp" alt="" class="img-fluid" />
+              </div>
+            </div>
+            <div class="col-6 d-none col-md-3 d-md-block col-lg-2">
+              <div>
+                <img src="assets/img/media/media0.webp" alt="" class="img-fluid" />
+              </div>
+            </div>
+            <div class="col-6 d-none col-md-3 d-md-block col-lg-2">
+              <div>
+                <img src="assets/img/media/media0.webp" alt="" class="img-fluid" />
+              </div>
+            </div>
+            <div class="col-6 d-none col-md-3 col-lg-2 d-lg-block">
+              <div>
+                <img src="assets/img/media/media0.webp" alt="" class="img-fluid" />
+              </div>
+            </div>
+            <div class="col-6 d-none col-md-3 col-lg-2 d-lg-block">
+              <div>
+                <img src="assets/img/media/media0.webp" alt="" class="img-fluid" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container pb-3">
+          <h2 class="text-light fs-4 py-2">Watch It Again</h2>
+          <div class="row g-1">
+            <div class="col-6 col-md-3 col-lg-2">
+              <div>
+                <img src="assets/img/media/media0.webp" alt="" class="img-fluid" />
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div>
+                <img src="assets/img/media/media0.webp" alt="" class="img-fluid" />
+              </div>
+            </div>
+            <div class="col-6 d-none col-md-3 d-md-block col-lg-2">
+              <div>
+                <img src="assets/img/media/media0.webp" alt="" class="img-fluid" />
+              </div>
+            </div>
+            <div class="col-6 d-none col-md-3 d-md-block col-lg-2">
+              <div>
+                <img src="assets/img/media/media0.webp" alt="" class="img-fluid" />
+              </div>
+            </div>
+            <div class="col-6 d-none col-md-3 col-lg-2 d-lg-block">
+              <div>
+                <img src="assets/img/media/media0.webp" alt="" class="img-fluid" />
+              </div>
+            </div>
+            <div class="col-6 d-none col-md-3 col-lg-2 d-lg-block">
+              <div>
+                <img src="assets/img/media/media0.webp" alt="" class="img-fluid" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container pb-5">
+          <h2 class="text-light fs-4 py-2">New Releases</h2>
+          <div class="row g-1">
+            <div class="col-6 col-md-3 col-lg-2">
+              <div>
+                <img src="assets/img/media/media0.webp" alt="" class="img-fluid" />
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2">
+              <div>
+                <img src="assets/img/media/media0.webp" alt="" class="img-fluid" />
+              </div>
+            </div>
+            <div class="col-6 d-none col-md-3 d-md-block col-lg-2">
+              <div>
+                <img src="assets/img/media/media0.webp" alt="" class="img-fluid" />
+              </div>
+            </div>
+            <div class="col-6 d-none col-md-3 d-md-block col-lg-2">
+              <div>
+                <img src="assets/img/media/media0.webp" alt="" class="img-fluid" />
+              </div>
+            </div>
+            <div class="col-6 d-none col-md-3 col-lg-2 d-lg-block">
+              <div>
+                <img src="assets/img/media/media0.webp" alt="" class="img-fluid" />
+              </div>
+            </div>
+            <div class="col-6 d-none col-md-3 col-lg-2 d-lg-block">
+              <div>
+                <img src="assets/img/media/media0.webp" alt="" class="img-fluid" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <div class="container pt-5 pb-3">
+          <div class="row">
+            <div class="col-2 d-none d-md-block"></div>
+            <div class="col-12 text-center text-md-start col-md">
+              <div>
+                <i class="fab fa-facebook-square text-secondary fs-2"></i>
+                <i class="fab fa-instagram text-secondary fs-2"></i>
+                <i class="fab fa-twitter text-secondary fs-2"></i>
+                <i class="fab fa-youtube text-secondary fs-2"></i>
+              </div>
+            </div>
+            <div class="col-2 d-none d-md-block"></div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-2 d-none d-md-block"></div>
+            <div class="col-12 text-center text-md-start col-md">
+              <div>
+                <p class="text-secondary">Audio and Subtitles</p>
+                <p class="text-secondary">Media Center</p>
+                <p class="text-secondary">Privacy</p>
+                <p class="text-secondary">Contact Us</p>
+              </div>
+            </div>
+            <div class="col-12 text-center text-md-start col-md">
+              <div>
+                <p class="text-secondary">Audio Description</p>
+                <p class="text-secondary">Investor Relations</p>
+                <p class="text-secondary">Legal notices</p>
+              </div>
+            </div>
+            <div class="col-12 text-center text-md-start col-md">
+              <div>
+                <p class="text-secondary">Help Center</p>
+                <p class="text-secondary">Jobs</p>
+                <p class="text-secondary">Cookie Preferences</p>
+              </div>
+            </div>
+            <div class="col-12 text-center text-md-start col-md">
+              <div>
+                <p class="text-secondary">Gift Cards</p>
+                <p class="text-secondary">Terms of Use</p>
+                <p class="text-secondary">Corporate informations</p>
+              </div>
+            </div>
+            <div class="col-2 d-none d-md-block"></div>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-2 d-none d-md-block"></div>
+            <div class="col-12 text-center text-md-start col-md">
+              <div>
+                <button class="btn btn-small btn-outline-secondary">Service Code</button>
+              </div>
+            </div>
+            <div class="col-2 d-none d-md-block"></div>
+          </div>
+        </div>
+
+        <div class="containe pt-3">
+          <div class="row">
+            <div class="col-2 d-none d-md-block"></div>
+            <div class="col-12 text-center text-md-start col-md">
+              <div>
+                <p class="text-secondary">& copy1997-2019 Netflix, inc. {i=############}</p>
+              </div>
+            </div>
+            <div class="col-2 d-none d-md-block"></div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
